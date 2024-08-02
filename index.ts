@@ -40,7 +40,8 @@ function processFolder(prefix: string | undefined, folder: string, infix: string
             formattedContent = `${prefix}, ${formattedContent}`
         }
 
-        formattedContent = formattedContent.slice(0, -1) // Remove the trailing `,`
+        // Remove the trailing `,` and convert to lowercase
+        formattedContent = formattedContent.slice(0, -1).toLowerCase() 
 
         // Regular expressions for Hiragana, Katakana, and Kanji
         const hiraganaRegex = /[\u3040-\u309F]/
